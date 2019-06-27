@@ -43,9 +43,11 @@ def Hack_Panda(try_num):
             print("{} 은 이미 정지된 계정입니다.".format(got_num))
         else:
             print("[ohyeah] {} 는 정지되지 않았습니다.".format(got_num))
-            while True:
+            for hola in range(10):
                 print("we found {} this".format(got_num))
-            break
+            with open("lists.txt", "w") as file:
+                file.write(str(got_num)+"\n")
+                file.close()
         tries += 1
         r.close()
 
